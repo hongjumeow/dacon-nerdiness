@@ -51,7 +51,7 @@ regr.fit(train_x_imputed, train_labels)
 
 y_pred = regr.predict(test_x_imputed)
 
-y_pred_bi = np.array([0 if i <= .5 else 1 for i in y_pred])
+y_pred_bi = np.array([0 if i <= train_labels.mean() else 1 for i in y_pred])
 print(y_pred_bi)
 
 acc_score = accuracy_score(y_pred_bi, test_labels)
