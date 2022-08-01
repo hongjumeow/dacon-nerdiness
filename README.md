@@ -1,10 +1,14 @@
 # dacon-nerdiness
 
 ### How to know Nerdiness? 
-implemented by UGH 
+implemented by UGH ([U](https://github.com/YJWon00), [G](https://github.com/james98kr), [H](https://github.com/hongjumeow))
+
+
 
 UGHHHHHHHHHHHHHHHHHHHHHH
 Fighting
+
+
 
 competition site address below :
 
