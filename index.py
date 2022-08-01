@@ -41,7 +41,7 @@ print(len(data[0]))
 train_features, test_features, train_labels, test_labels = train_test_split(data, train_y, test_size=0.25)
 
 from sklearn.impute import SimpleImputer
-imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+imputer = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
 train_x_imputed = imputer.fit(train_features)
 train_x_imputed = imputer.transform(train_features)
 test_x_imputed = imputer.transform(test_features)
