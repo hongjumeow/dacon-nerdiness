@@ -29,7 +29,7 @@ class Trainer():
 if __name__ == '__main__':
     # load data
     dataloader = DataLoader('competition-data/train.csv', 'competition-data/test.csv')
-    train_features, val_features, train_labels, val_labels =  dataloader.get_trainset()
+    train_features, val_features, train_labels, val_labels =  dataloader.get_train_val_data()
     
     # train
     trainer = Trainer(train_features, train_labels)

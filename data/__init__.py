@@ -10,16 +10,13 @@ class DataLoader():
         self.trainset = pd.read_csv(path_train)
         self.testset = pd.read_csv(path_test)
 
-        self.drop_index()
-
-    def drop_index(self):
         self.trainset = self.trainset.drop(['index'], axis=1)
         self.testset = self.testset.drop(['index'], axis=1)
     
     def split_label(self, dataset, val):
         return dataset.drop([val], axis=1), dataset[val]
 
-    def get_trainset(self):
+    def get_train_val_data(self):
         self.train_x, self.train_y = self.split_label(self.trainset, 'nerdiness')
         self.train_x = one_hot_encode(self.train_x, 'country')
 
@@ -27,7 +24,7 @@ class DataLoader():
 
         return train_test_split(impute(self.train_x), self.train_y, test_size=0.25)
 
-    def get_testset(self):
+    def get_test_data(self):
         return impute(self.testset)
         
     def get_categories(self):
@@ -36,6 +33,5 @@ class DataLoader():
     def get_labels_by_category(self, data, category):
         #return data[:, data.index(category)]
         return
-
     
     
